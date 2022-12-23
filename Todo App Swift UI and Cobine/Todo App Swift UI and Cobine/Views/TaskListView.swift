@@ -15,7 +15,7 @@ struct TaskListView: View {
             VStack(alignment: .leading) {
                 List {
                     ForEach (self.tasks) { task in
-                        Text(task.title)
+                        TaskCell(task: task)
                     }
                 }
             }
@@ -33,6 +33,20 @@ struct TaskListView: View {
         .navigationBarTitle("Tasks")
     }
 }
+
+struct TaskCell: View {
+    var task: Task
+    
+    var body: some View {
+        HStack {
+            Image(systemName: task.completed ? "checkmark.circle.fill" : "circle")
+                .resizable()
+                .frame(width: 20, height: 20)
+            Text(task.title)
+        }
+    }
+}
+
 
 struct TaskListView_Previews: PreviewProvider {
   static var previews: some View {
