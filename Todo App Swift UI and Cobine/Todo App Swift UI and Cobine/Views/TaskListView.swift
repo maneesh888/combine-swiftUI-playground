@@ -11,10 +11,16 @@ struct TaskListView: View {
     var tasks: [Task] = testDataTasks
     
     var body: some View {
-        Text("Heloow")
+        NavigationView {
+            VStack(alignment: .leading) {
+                List {
+                    ForEach (self.tasks) { task in
+                        Text(task.title)
+                    }
+                }
+            }
+        }
     }
-    
-    
 }
 
 
