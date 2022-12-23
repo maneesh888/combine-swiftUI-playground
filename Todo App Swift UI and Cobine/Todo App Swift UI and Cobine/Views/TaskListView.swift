@@ -20,7 +20,22 @@ struct TaskListView: View {
                 }
             }
         }
+        Button(action: {}) {
+            HStack {
+                Image(systemName: "plus.circle.fill")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                Text("New Task")
+            }
+        }
+        .padding()
+        .accentColor(Color(UIColor.systemRed))
+        .navigationBarTitle("Tasks")
     }
 }
 
-
+struct TaskListView_Previews: PreviewProvider {
+  static var previews: some View {
+    TaskListView()
+  }
+}
