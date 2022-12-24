@@ -20,12 +20,21 @@ struct TaskListView: View {
                     ForEach (taskListVM.taskCellViewModels) { taskCellVM in
                         TaskCell(taskCellVM: taskCellVM)
                     }
-                    .onDelete(perform: { index in
-                        
+                    .onDelete(perform: { indexSet in
+                        self.taskListVM.removeTasks(atOffesets: indexSet)
                     })
                 }
-                
-                Button(action: {}) {
+                if presentAddNewItem {
+                    TaskCell(taskCellVM: TaskCellViewModel.newTask()) { result in
+                        if case .success(let task) = result {
+                            self.taskListVM.addTask(task: task)
+                        }
+                        self.presentAddNewItem.toggle()
+                    }
+                }
+                Button(action: {
+                    self.presentAddNewItem.toggle()
+                }) {
                     HStack {
                         Image(systemName: "plus.circle.fill")
                             .resizable()
