@@ -17,6 +17,9 @@ struct TaskListView: View {
                     ForEach (self.tasks) { task in
                         TaskCell(task: task)
                     }
+                    .onDelete(perform: { index in
+                        
+                    })
                 }
                 
                 Button(action: {}) {
