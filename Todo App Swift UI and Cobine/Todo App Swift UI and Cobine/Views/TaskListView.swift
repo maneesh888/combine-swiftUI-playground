@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TaskListView: View {
-    var tasks: [Task] = testDataTasks
+    
+    @ObservedObject var taskListVM = TaskListViewModel()
+    @State var presentAddNewItem = false
     
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
                 List {
-                    ForEach (self.tasks) { task in
-                        TaskCell(task: task)
+                    ForEach (taskListVM.taskCellViewModels) { taskCellVM in
+                        TaskCell(taskCellVM: taskCellVM)
                     }
                     .onDelete(perform: { index in
                         
@@ -38,19 +41,36 @@ struct TaskListView: View {
 }
 
 struct TaskCell: View {
-    var task: Task
+    
+    @ObservedObject var taskCellVM: TaskCellViewModel
+    var onCommit: (Result<Task, InputError>) -> Void = {_ in}
     
     var body: some View {
         HStack {
-            Image(systemName: task.completed ? "checkmark.circle.fill" : "circle")
+            Image(systemName: taskCellVM.completionStateIconName)
                 .resizable()
                 .frame(width: 20, height: 20)
-            Text(task.title)
+                .onTapGesture {
+                    self.taskCellVM.task.completed.toggle()
+                }
+            TextField("Enter task title", text: $taskCellVM.task.title,
+                 onCommit: {
+                if !self.taskCellVM.task.title.isEmpty {
+                    self.onCommit(.success(self.taskCellVM.task))
+                }else{
+                    self.onCommit(.failure(.empty))
+                }
+                
+            }).id(taskCellVM.id)
         }
+                  
     }
 }
 
-
+enum InputError: Error {
+    case empty
+}
+                  
 struct TaskListView_Previews: PreviewProvider {
   static var previews: some View {
     TaskListView()
