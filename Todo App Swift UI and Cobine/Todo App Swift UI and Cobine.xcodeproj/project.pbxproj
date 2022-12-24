@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9F19D2AF2957319C001ADA44 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19D2AE2957319C001ADA44 /* TaskListViewModel.swift */; };
 		9F19D2B2295731EA001ADA44 /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19D2B1295731EA001ADA44 /* TaskCellViewModel.swift */; };
+		9F19D2B529576591001ADA44 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19D2B429576591001ADA44 /* TaskRepository.swift */; };
 		9F4CE04B2955BE470066F727 /* Todo_App_Swift_UI_and_CobineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE04A2955BE470066F727 /* Todo_App_Swift_UI_and_CobineApp.swift */; };
 		9F4CE04D2955BE470066F727 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE04C2955BE470066F727 /* ContentView.swift */; };
 		9F4CE04F2955BE490066F727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CE04E2955BE490066F727 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		9F19D2AE2957319C001ADA44 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		9F19D2B1295731EA001ADA44 /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
+		9F19D2B429576591001ADA44 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 		9F4CE0472955BE470066F727 /* Todo App Swift UI and Cobine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo App Swift UI and Cobine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4CE04A2955BE470066F727 /* Todo_App_Swift_UI_and_CobineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_App_Swift_UI_and_CobineApp.swift; sourceTree = "<group>"; };
 		9F4CE04C2955BE470066F727 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		9F19D2B329576567001ADA44 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9F19D2B429576591001ADA44 /* TaskRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		9F4CE03E2955BE470066F727 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		9F4CE0492955BE470066F727 /* Todo App Swift UI and Cobine */ = {
 			isa = PBXGroup;
 			children = (
+				9F19D2B329576567001ADA44 /* Repository */,
 				9F4CE0602955CDD70066F727 /* App */,
 				9F4CE05D2955BE750066F727 /* Model */,
 				9F4CE04A2955BE470066F727 /* Todo_App_Swift_UI_and_CobineApp.swift */,
@@ -197,6 +208,7 @@
 				9F4CE0572955BE490066F727 /* Todo_App_Swift_UI_and_Cobine.xcdatamodeld in Sources */,
 				9F4CE0662955FE9D0066F727 /* TaskListView.swift in Sources */,
 				9F4CE05F2955BE7F0066F727 /* Task.swift in Sources */,
+				9F19D2B529576591001ADA44 /* TaskRepository.swift in Sources */,
 				9F4CE04D2955BE470066F727 /* ContentView.swift in Sources */,
 				9F4CE04B2955BE470066F727 /* Todo_App_Swift_UI_and_CobineApp.swift in Sources */,
 			);
