@@ -99,9 +99,9 @@
 				9F4CE04E2955BE490066F727 /* Assets.xcassets */,
 				9F4CE0532955BE490066F727 /* Persistence.swift */,
 				9F4CE0552955BE490066F727 /* Todo_App_Swift_UI_and_Cobine.xcdatamodeld */,
-				9F19D2B0295731AD001ADA44 /* ViewModels */,
 				9F4CE0502955BE490066F727 /* Preview Content */,
 				9F4CE0672955FEA70066F727 /* Views */,
+				9F19D2B0295731AD001ADA44 /* ViewModels */,
 			);
 			path = "Todo App Swift UI and Cobine";
 			sourceTree = "<group>";
