@@ -10,7 +10,8 @@ import SwiftUI
 @main
 struct Todo_App_Swift_UI_and_CobineApp: App {
     let persistenceController = PersistenceController.shared
-
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
             TaskListView()

@@ -23,15 +23,17 @@ struct TaskListView: View {
                     .onDelete(perform: { indexSet in
                         self.taskListVM.removeTasks(atOffesets: indexSet)
                     })
-                }
-                if presentAddNewItem {
-                    TaskCell(taskCellVM: TaskCellViewModel.newTask()) { result in
-                        if case .success(let task) = result {
-                            self.taskListVM.addTask(task: task)
+                    if presentAddNewItem {
+                        TaskCell(taskCellVM: TaskCellViewModel.newTask()) { result in
+                            if case .success(let task) = result {
+                                self.taskListVM.addTask(task: task)
+                            }
+                            self.presentAddNewItem.toggle()
                         }
-                        self.presentAddNewItem.toggle()
                     }
+                    
                 }
+                
                 Button(action: {
                     self.presentAddNewItem.toggle()
                 }) {
