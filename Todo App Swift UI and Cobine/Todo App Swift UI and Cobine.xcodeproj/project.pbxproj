@@ -14,6 +14,7 @@
 		9F19D2BA2957842A001ADA44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE0612955CDD70066F727 /* AppDelegate.swift */; };
 		9F19D2BE295785A5001ADA44 /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F19D2BD295785A5001ADA44 /* AppDelegate+Injection.swift */; };
 		9F19D2C129578611001ADA44 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 9F19D2C029578611001ADA44 /* Resolver */; };
+		9F19D2CA29584822001ADA44 /* Disk in Frameworks */ = {isa = PBXBuildFile; productRef = 9F19D2C929584822001ADA44 /* Disk */; };
 		9F4CE04B2955BE470066F727 /* Todo_App_Swift_UI_and_CobineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE04A2955BE470066F727 /* Todo_App_Swift_UI_and_CobineApp.swift */; };
 		9F4CE04D2955BE470066F727 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CE04C2955BE470066F727 /* ContentView.swift */; };
 		9F4CE04F2955BE490066F727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CE04E2955BE490066F727 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F19D2C129578611001ADA44 /* Resolver in Frameworks */,
+				9F19D2CA29584822001ADA44 /* Disk in Frameworks */,
 				9F19D2B829577F47001ADA44 /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +161,7 @@
 			packageProductDependencies = (
 				9F19D2B729577F47001ADA44 /* Resolver */,
 				9F19D2C029578611001ADA44 /* Resolver */,
+				9F19D2C929584822001ADA44 /* Disk */,
 			);
 			productName = "Todo App Swift UI and Cobine";
 			productReference = 9F4CE0472955BE470066F727 /* Todo App Swift UI and Cobine.app */;
@@ -191,6 +194,7 @@
 			packageReferences = (
 				9F19D2B629577F47001ADA44 /* XCRemoteSwiftPackageReference "Resolver" */,
 				9F19D2BF29578611001ADA44 /* XCRemoteSwiftPackageReference "Resolver" */,
+				9F19D2C829584821001ADA44 /* XCRemoteSwiftPackageReference "Disk" */,
 			);
 			productRefGroup = 9F4CE0482955BE470066F727 /* Products */;
 			projectDirPath = "";
@@ -451,6 +455,14 @@
 				kind = branch;
 			};
 		};
+		9F19D2C829584821001ADA44 /* XCRemoteSwiftPackageReference "Disk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/saoudrizwan/Disk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -463,6 +475,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9F19D2BF29578611001ADA44 /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = Resolver;
+		};
+		9F19D2C929584822001ADA44 /* Disk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F19D2C829584821001ADA44 /* XCRemoteSwiftPackageReference "Disk" */;
+			productName = Disk;
 		};
 /* End XCSwiftPackageProductDependency section */
 

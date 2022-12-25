@@ -11,6 +11,6 @@ import Resolver
 
 extension Resolver: ResolverRegistering {
   public static func registerAllServices() {
-    register { TestDataTaskRepository() as TaskRepository }
+    register { LocalTaskRepository() as TaskRepository }
   }
 }

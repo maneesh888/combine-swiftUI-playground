@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum TaskPriority {
+enum TaskPriority: Int, Codable {
     case high, medium, low
 }
 
-struct Task: Identifiable {
+struct Task: Identifiable, Codable {
     var id: String = UUID().uuidString
     var title: String
     var priority: TaskPriority
